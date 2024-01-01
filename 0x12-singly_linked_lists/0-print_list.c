@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stddef.h>i
+#include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -10,22 +10,19 @@
 
 size_t print_list(const list_t *h)
 {
-	/*sets new to pint the head*/
-	const list *new = head;
-	size-t count = 0;
+	size_t count = 0;
 
-	while (new !=  NULL)
+	while (h !=  NULL)
 	{
-		if (new->str == NULL)
+		if (h->str == NULL)
 		{
-			printf("[0], (nil)\n");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[u]  %s\n, ", new->len, new_>str);
+			printf("[%u]  %s\n", h->len, h->str);
 		}
-		new = new->next;
 		count++;
-	}
-	return (count);
+		h = h->next;
+	}	return (count);
 }
